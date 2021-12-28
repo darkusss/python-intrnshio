@@ -30,6 +30,7 @@ def generate_x_values():
         print('f3(' + str(x) + '): ' + str(f3x))
         yield [f1x, f2x, f3x]
 
+
 x_values = {}
 x_index = 5
 for x_value in generate_x_values():
@@ -52,9 +53,7 @@ with open('task2.csv', 'r') as file:
     for row in csv_reader:
         x_list.append([row['x'], row['f1(x)'], row['f2(x)'], row['f3(x)']])
 
-
 print(x_list)
-
 
 with open('task2.json', 'w') as file:
     json.dump(x_list, file)

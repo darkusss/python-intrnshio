@@ -12,3 +12,10 @@
 - [x] sorted dictionary key's values descendingly
 - [x] created **set** from all lists from dictionary
 - [x] stringified **set**
+
+## task 2
+
+- [x] created functions
+- [x] streamed data to csv file
+- [x] read data from csv file and manipulate it
+- [x] streamed data to json file
