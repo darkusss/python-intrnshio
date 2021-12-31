@@ -9,7 +9,7 @@ class Shape:
     def get_distance(self, figure_1, figure_2):
         x1, y1 = figure_1.coordinates
         x2, y2 = figure_2.coordinates
-        return sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2))
+        return sqrt((x1 - x2)**2 + (y1 - y2)**2)
 
 
 class Circle(Shape):
@@ -122,3 +122,5 @@ print('Square coordinates {}'.format(square_instance.coordinates))
 print('Square area {}'.format(square_instance.get_area()))
 print('Square center {}'.format(square_instance.get_center()))
 print('Square vertexes {}'.format(square_instance.get_vertex()))
+
+print('Distance of Square and Circle: {}'.format(square_instance.get_distance(square_instance, circle_instance)))
