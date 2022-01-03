@@ -30,8 +30,7 @@ def create_db_with_table_city_data():
         sql_values = []
         for a in value:
             sql_values.append('({0},"{1}","{2}")'.format(int(a[1]), key, a[0]))
-        sql_insert = """INSERT INTO city(city_id, country, city) VALUES""" + ','.join(sql_values)
-        print(sql_insert)
+        sql_insert = 'INSERT INTO city(city_id, country, city) VALUES {}'.format(','.join(sql_values))
         try:
             cur.execute(sql_insert)
         except sqlite3.DatabaseError as err:
