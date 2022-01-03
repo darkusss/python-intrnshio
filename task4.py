@@ -20,7 +20,7 @@ def create_cities_dict():
 def create_db_with_table_city_data():
     con = sqlite3.connect('test.db')
     cur = con.cursor()
-    cur.execute("""CREATE TABLE city(
+    cur.execute("""CREATE TABLE IF NOT EXISTS city(
             city_id integer primary key,
             country text,
             city text
